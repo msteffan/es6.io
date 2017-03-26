@@ -11,22 +11,24 @@
   const fullNames = names.map(function(name) {
     return `${name} bos`;
   });
-
+  // arrow function with {} block and explicit return, (name) as argument
   const fullNames2 = names.map((name) => {
     return `${name} bos`;
   });
 
+  // arrow function with no () around name since it's a single argument
   const fullNames3 = names.map(name => {
     return `${name} bos`;
   });
 
+  // arrow function with no {} and no "return" because of implicit returns in ES6
   const fullNames4 = names.map(name => `${name} bos`);
 
+  // arrow function with no argument and implicit return
   const fullNames5 = names.map(() => `cool bos`);
 
-  const sayMyName = (name) => {
-    alert(`Hello ${name}!`)
-  }
+  // const assigned to an anonymous arrow function (roughly equivalent to creating a named function)
+  const sayMyName = (name) => {  alert(`Hello ${name}!`) }
 
   sayMyName('Wes');
 

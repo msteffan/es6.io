@@ -62,15 +62,19 @@
 
   <script>
     const box = document.querySelector('.box');
+    // generally want function declaration for the top-level functions
+    // if you use an arrow function, the scope of `this` will not be bound to the function but to the window
     box.addEventListener('click', function() {
       let first = 'opening';
       let second = 'open';
 
       if(this.classList.contains(first)) {
+        // ES6 syntax for swapping the values of two variables
         [first, second] = [second, first];
       }
 
       this.classList.toggle(first);
+      // arrow functions inherit the value of `this` / do not change scope
       setTimeout(() => {
         console.log(this);
         this.classList.toggle(second);

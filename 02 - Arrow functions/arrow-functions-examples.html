@@ -10,10 +10,14 @@
 const race = '100m Dash';
 const winners = ['Hunter Gath', 'Singa Song', 'Imda Bos'];
 
+// maps the winners into an object with their name, place, and race
+// uses parentheses around the object literal being returned to indicate {} as object literal rather than {} as function block
 const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+// tip: use console.table(win) to avoid the extra work of opening up the objects!
 
 const ages = [23,62,45,234,2,62,234,62,34];
 
+// filters the ages greater than 60 using implicit returns
 const old = ages.filter(age => age >= 60);
 console.log(old);
 
